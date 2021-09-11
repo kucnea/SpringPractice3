@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- id에는 url -->
-	<bean id="/index" class="com.newlecture.web.controller.IndexController">  
+	<bean id="/index" class="com.springpratice.web.controller.IndexController">  
 		
     </bean>        
         
