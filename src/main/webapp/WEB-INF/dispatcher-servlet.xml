@@ -5,9 +5,12 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- id에는 url -->
-	<bean id="/index" class="com.springpratice.web.controller.IndexController">  
-		
-    </bean>        
+	<bean id="/index" class="com.springpratice.web.controller.IndexController"/>  
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>		
         
 </beans>
 
