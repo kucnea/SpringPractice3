@@ -70,7 +70,8 @@
                         <h1 class="hidden">고객메뉴</h1>
                         <ul class="linear-layout">
                             <li><a href="/member/home"><img src="images/txt-mypage.png" alt="마이페이지" /></a></li>
-                            <li><a href="/notice/list.html"><img src="images/txt-customer.png" alt="고객센터" /></a></li>
+                            <li><a href="/spr2/notice/list"><img src="images/txt-customer.png" alt="고객센터" /></a></li>
+                            <!-- 여기서 list에 확장자 없어야 컨트롤러 url로 호출 -->
                         </ul>
                     </nav>
 

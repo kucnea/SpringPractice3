@@ -9,6 +9,8 @@
 
 	<!-- id에는 url -->
 	<bean id="/index" class="com.springpratice.web.controller.IndexController"/>  
+	<bean id="/spr2/notice/list" class="com.springpratice.web.controller.notice.ListController"/>  
+	<bean id="/notice/detail" class="com.springpratice.web.controller.notice.DetailController"/>  
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/"></property>
