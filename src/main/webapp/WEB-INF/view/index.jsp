@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <title>공지사항목록</title>
 
-    <link href="css/layout.css" type="text/css" rel="stylesheet" />
-    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link href="/css/layout.css" type="text/css" rel="stylesheet" />
+    <link href="/css/index.css" type="text/css" rel="stylesheet" />
     <script>
     
     </script>
@@ -25,7 +25,7 @@
 
             <h1 id="logo">
                 <a href="/index.html">
-                    <img src="images/logo.png" alt="뉴렉처 온라인" />
+                    <img src="/images/logo.png" alt="뉴렉처 온라인" />
 
                 </a>
             </h1>
@@ -69,8 +69,8 @@
                     <nav id="member-menu" class="linear-layout">
                         <h1 class="hidden">고객메뉴</h1>
                         <ul class="linear-layout">
-                            <li><a href="/member/home"><img src="images/txt-mypage.png" alt="마이페이지" /></a></li>
-                            <li><a href="/spr2/notice/list"><img src="images/txt-customer.png" alt="고객센터" /></a></li>
+                            <li><a href="/member/home"><img src="/images/txt-mypage.png" alt="마이페이지" /></a></li>
+                            <li><a href="/notice/list"><img src="/images/txt-customer.png" alt="고객센터" /></a></li>
                             <!-- 여기서 list에 확장자 없어야 컨트롤러 url로 호출 -->
                         </ul>
                     </nav>
