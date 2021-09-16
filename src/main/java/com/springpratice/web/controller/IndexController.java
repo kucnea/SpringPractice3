@@ -23,7 +23,7 @@ public class IndexController implements Controller{
 		*/
 		
 		// version2
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("root.index"); //tiles 이용을 위해 강제로 root.으로 분류
 		mv.addObject("data","Hello Spring MVC!");
 		
 		return mv;
