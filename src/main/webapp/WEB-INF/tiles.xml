@@ -3,6 +3,8 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
+  
+  <!-- 
   <definition name="notice.list" template="/WEB-INF/view/customer/inc/layout.jsp">
     <put-attribute name="title" value="공지사항" />
     <put-attribute name="header" value="/WEB-INF/view/inc/header.jsp" />
@@ -11,7 +13,9 @@
     <put-attribute name="body" value="/WEB-INF/view/customer/notice/list.jsp" />
     <put-attribute name="footer" value="/WEB-INF/view/inc/footer.jsp" />
   </definition>
-  
+	 -->
+	 
+	<!--   
   <definition name="notice.detail" template="/WEB-INF/view/customer/inc/layout.jsp">
     <put-attribute name="title" value="Tiles tutorial homepage" />
     <put-attribute name="header" value="/WEB-INF/view/inc/header.jsp" />
@@ -20,5 +24,21 @@
     <put-attribute name="body" value="/WEB-INF/view/customer/notice/detail.jsp" />
     <put-attribute name="footer" value="/WEB-INF/view/inc/footer.jsp" />
   </definition>
+   -->
+   
+   <!-- version 2  -->
+   <definition name="notice.*" template="/WEB-INF/view/customer/inc/layout.jsp">
+    <put-attribute name="title" value="공지사항" />
+    <put-attribute name="header" value="/WEB-INF/view/inc/header.jsp" />
+    <put-attribute name="visual" value="/WEB-INF/view/customer/inc/visual.jsp" />
+    <put-attribute name="aside" value="/WEB-INF/view/customer/inc/aside.jsp" />
+    <put-attribute name="body" value="/WEB-INF/view/customer/notice/{1}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/view/inc/footer.jsp" />
+  </definition>
+   <!-- definition name에 *하나를 하나의 와일드카드라 지칭. body의 {1}은 첫번째 와일드카드를 의미 -->
+   <!-- 만약에 notice.*.* 이라면 {1}, {2} 를 사용-->
+   <!-- 와일드 카드는 정규식도 가능.  -->
+   <!-- tile 와일드 카드의 레퍼런스 https://tiles.apache.org/framework/tutorial/advanced/wildcard.html -->
+   
 
 </tiles-definitions>
