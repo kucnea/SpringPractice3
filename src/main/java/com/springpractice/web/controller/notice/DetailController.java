@@ -1,4 +1,4 @@
-package com.springpratice.web.controller.notice;
+package com.springpractice.web.controller.notice;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

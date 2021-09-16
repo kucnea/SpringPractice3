@@ -1,4 +1,4 @@
-package com.springpratice.web.controller;
+package com.springpractice.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
