@@ -4,11 +4,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController /*implements Controller*/{
+public class HomeController /*implements Controller*/{
 	
+	//이전 방식으로는 이 class가 url에 mapping 되는 방식이였는데
+	//이제는 method가 mapping되므로 
+	//메소드가 더 생성되면 더 많은 url을 만들 수 있음.
+	//각각의 method들이 하나의 controller가 된 것.
+	//이 class는 이제 controlle들이 담긴 폴더처럼 된 것.
 	@RequestMapping("/index")
-	public void aaaa() {
-		System.out.println("test");
+	public String index() {	//url과 method명을 맞추는 것이 관리에 용이
+		
+		
+		
+		return "root.index";
 	}
 
 // annotation 으로 url mapping할 경우 하기 내용 불필요
