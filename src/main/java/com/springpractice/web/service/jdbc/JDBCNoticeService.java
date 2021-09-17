@@ -1,7 +1,6 @@
 package com.springpractice.web.service.jdbc;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,10 +12,12 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.springpractice.web.entity.Notice;
 import com.springpractice.web.service.NoticeService;
 
+@Service //Component는 범용, @Controller @Service @Repository는 역할을 알기 좋음
 public class JDBCNoticeService implements NoticeService {
 //	private String url = "jdbc:oracle:thin:@localhost:1521:XE";
 //	private String uid = "gb2";
