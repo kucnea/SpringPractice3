@@ -12,6 +12,8 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.springpractice.web.entity.Notice;
 import com.springpractice.web.service.NoticeService;
 
@@ -23,6 +25,7 @@ public class JDBCNoticeService implements NoticeService {
 
 	private DataSource dataSource;
 	
+	@Autowired
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
