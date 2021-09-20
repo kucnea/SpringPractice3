@@ -16,11 +16,11 @@
 	
 	<!-- url을 annotation으로 처리 -->
 	<!-- <bean id="/index" class="com.springpractice.web.controller.IndexController"/> -->  
-	<bean id="/notice/list" class="com.springpractice.web.controller.notice.ListController">
+	<!-- <bean id="/notice/list" class="com.springpractice.web.controller.notice.ListController"> -->
 		<!-- 하기 설정을 @ (어노테이션) 으로 사용하기위해 주석처리 -->
 		<!-- <property name="noticeService" ref="noticeService"/>  -->
-	</bean>
-	<bean id="/notice/detail" class="com.springpractice.web.controller.notice.DetailController"/>  
+	<!-- </bean> -->
+	<!-- <bean id="/notice/detail" class="com.springpractice.web.controller.notice.DetailController"/> -->  
 	
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
