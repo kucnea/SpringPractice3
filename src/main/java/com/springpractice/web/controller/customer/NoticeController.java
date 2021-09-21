@@ -11,6 +11,7 @@ import com.springpractice.web.entity.Notice;
 import com.springpractice.web.service.NoticeService;
 
 @Controller
+@RequestMapping("/customer/notice/")
 public class NoticeController{
 
 	//1번 위치. 여기에 Autowired를 할 경우 하기 Autowired외에 무언가 처리될 수는 없음.
@@ -27,14 +28,14 @@ public class NoticeController{
 //		this.noticeService = noticeService;
 //	}
 
-	@RequestMapping("/customer/notice/list")
+	@RequestMapping("list")
 	public String list() throws ClassNotFoundException, SQLException {
 		
 		List<Notice> list = noticeService.getList(1, "TITLE", "");
 		return "notice.list";
 	}
 	
-	@RequestMapping("/customer/notice/detail")
+	@RequestMapping("detail")
 	public String detail() {
 		
 		return "notice.detail";
