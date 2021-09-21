@@ -24,7 +24,9 @@ public class NoticeController {
 		
 		return list.get(0);
 	}	
-
+	//JSON에 의한 출력.
+	
+	
 	/*
 
 	@RequestMapping("list")

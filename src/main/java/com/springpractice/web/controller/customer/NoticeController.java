@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.springpractice.web.entity.Notice;
 import com.springpractice.web.service.NoticeService;
@@ -28,8 +29,10 @@ public class NoticeController{
 //		this.noticeService = noticeService;
 //	}
 
-	@RequestMapping("list")
-	public String list() throws ClassNotFoundException, SQLException {
+	@RequestMapping("list")			//value로도 동일하게 가능, 중복 X // 기본값의 필요 여부, default값은 ture
+	public String list(@RequestParam(name = "p", required = false) Integer page) throws ClassNotFoundException, SQLException {
+//		String p = request.getParameter("p");
+		System.out.println("page"+page);
 		
 		List<Notice> list = noticeService.getList(1, "TITLE", "");
 		return "notice.list";
@@ -40,6 +43,22 @@ public class NoticeController{
 		
 		return "notice.detail";
 	}
+	
+	/* 전달받을 파라미터 설정, 그 값의 기본값 설정, 타입을 자유롭게 지정 가능.
+	
+	@RequestMapping("list")
+	public String list(@RequestParam(name = "p",defaultValue = "1") int page) throws ClassNotFoundException, SQLException {
+//		String p = request.getParameter("p");
+		System.out.println("page"+page);
+		
+		List<Notice> list = noticeService.getList(1, "TITLE", "");
+		return "notice.list";
+	}
+	
+	*/
+	
+	
+	
 //	@Override
 //	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 //		
