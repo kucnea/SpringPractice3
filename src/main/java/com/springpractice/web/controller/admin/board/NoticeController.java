@@ -27,8 +27,9 @@ public class NoticeController {
 	}
 	@RequestMapping("reg")
 	@ResponseBody
-	public String reg(String title, String content, MultipartFile file, String category, String[] foods, String food, HttpServletRequest request) throws IllegalStateException, IOException {
+	public String reg(String title, String content, MultipartFile[] files, String category, String[] foods, String food, HttpServletRequest request) throws IllegalStateException, IOException {
 		
+		for(MultipartFile file : files) {
 		long size = file.getSize();
 		String fileName = file.getOriginalFilename();
 		
@@ -48,6 +49,8 @@ public class NoticeController {
 		File saveFile = new File(realPath);
 		
 		file.transferTo(saveFile);
+		
+		}
 		
 		System.out.println(category);
 		for(String f : foods) {
