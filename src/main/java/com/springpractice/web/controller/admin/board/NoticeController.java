@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,11 +25,24 @@ public class NoticeController {
 	@RequestMapping("list")
 	public String list() {
 		
-		return "";
+		return "admin.board.notice.list";
 	}
-	@RequestMapping("reg")
-	@ResponseBody
+	
+	//get 요청 처리
+//	@RequestMapping("reg") 이전의 방식
+	@GetMapping("reg")
+	public String reg() {
+		
+		return "admin.board.notice.reg"; 
+	}
+	
+	//post 요청 처리
+//	@RequestMapping("reg") 이건 이전의 방식
+//	@ResponseBody 문자열반환의 연습에서 view페이지를 쓸 것이기 때문에 주석
+	@PostMapping("reg")
 	public String reg(String title, String content, MultipartFile[] files, String category, String[] foods, String food, HttpServletRequest request) throws IllegalStateException, IOException {
+		
+//		if(request.getMethod().equals("POST")) {}로 묶어서 post일때와 아닐때를 구분 할 수도 있음
 		
 		for(MultipartFile file : files) {
 		long size = file.getSize();
@@ -57,16 +72,17 @@ public class NoticeController {
 			System.out.println(f);
 		}
 		
-		return String.format("title:%s<br>content:%s<br>category:%s<br>", title, content, category);
+		return "admin.board.notice.reg";
+//		return String.format("title:%s<br>content:%s<br>category:%s<br>", title, content, category);
 	}
 	@RequestMapping("edit")
 	public String edit() {
 		
-		return "";
+		return "admin.board.notice.edit";
 	}
 	@RequestMapping("del")
 	public String del() {
 		
-		return "";
+		return "admin.board.notice.del";
 	}
 }
